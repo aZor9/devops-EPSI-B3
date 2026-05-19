@@ -38,8 +38,8 @@ jobs:
           context: .  # Contexte de build (répertoire racine)
           file: ./Dockerfile  # Chemin vers le Dockerfile
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/mon-application:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/mon-application:${{ github.sha }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/docker-devops-b3-epsi:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/docker-devops-b3-epsi:${{ github.sha }}
           # Ne pousse pas l'image sur les PR
           push: ${{ github.event_name != 'pull_request' }}
           # Cache les couches Docker pour accélérer les builds
